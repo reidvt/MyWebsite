@@ -398,51 +398,80 @@ export default function Home() {
         <Divider />
 
         {/* Education */}
-        <section id="education" style={{ padding: "4rem 0" }}>
-          <SectionLabel>Education</SectionLabel>
-          <div
-            style={{
-              background: "#0b1318",
-              borderLeft: "3px solid #5ab4d6",
-              padding: "1.5rem",
-              borderRadius: "0 4px 4px 0",
-              marginTop: "2rem",
-              marginBottom: "2rem",
-            }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.3rem" }}>
-              <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 18, color: "#e8f4f0" }}>
-                Fairfield University
-              </span>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5a8090" }}>
-                May 2026
-              </span>
-            </div>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#5ab4d6", marginBottom: "0.75rem" }}>
-              B.S. Computer Science · Minor: Mathematics · GPA: 3.4
-            </div>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5a8090", marginBottom: "0.75rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-              Coursework
-            </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-              {COURSES.map((course) => (
-                <span
-                  key={course}
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 11,
-                    color: "#7a9aaa",
-                    background: "#0a0d0f",
-                    border: "1px solid #1a2a32",
-                    padding: "3px 10px",
-                    borderRadius: 3,
-                  }}
-                >
-                  {course}
-                </span>
-              ))}
-            </div>
-          </div>
+<section id="education" style={{ padding: "4rem 0" }}>
+  <SectionLabel>Education</SectionLabel>
+
+  {/* UPenn Entry */}
+  <div
+    style={{
+      background: "#0b1318",
+      borderLeft: "3px solid #5ab4d6",
+      padding: "1.5rem",
+      borderRadius: "0 4px 4px 0",
+      marginTop: "2rem",
+      marginBottom: "2rem",
+    }}
+  >
+    <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.3rem" }}>
+      <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 18, color: "#e8f4f0" }}>
+        University of Pennsylvania
+      </span>
+      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5a8090" }}>
+        Expected May 2028
+      </span>
+    </div>
+    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#5ab4d6", marginBottom: "0.75rem" }}>
+      MSE in Artificial Intelligence
+    </div>
+    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#7a9aaa", fontStyle: "italic" }}>
+      Focus: AI Ethics and Engineering
+    </div>
+  </div>
+
+  {/* Fairfield Entry */}
+  <div
+    style={{
+      background: "#0b1318",
+      borderLeft: "3px solid #5ab4d6",
+      padding: "1.5rem",
+      borderRadius: "0 4px 4px 0",
+      marginTop: "2rem",
+      marginBottom: "2rem",
+    }}
+  >
+    <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.3rem" }}>
+      <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 18, color: "#e8f4f0" }}>
+        Fairfield University
+      </span>
+      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5a8090" }}>
+        May 2026
+      </span>
+    </div>
+    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#5ab4d6", marginBottom: "0.75rem" }}>
+      B.S. Computer Science · Minor: Mathematics · GPA: 3.4
+    </div>
+    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5a8090", marginBottom: "0.75rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+      Coursework
+    </div>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+      {COURSES.map((course) => (
+        <span
+          key={course}
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: 11,
+            color: "#7a9aaa",
+            background: "#0a0d0f",
+            border: "1px solid #1a2a32",
+            padding: "3px 10px",
+            borderRadius: 3,
+          }}
+        >
+          {course}
+        </span>
+      ))}
+    </div>
+  </div>
 
           {/* Extracurriculars */}
           <div
