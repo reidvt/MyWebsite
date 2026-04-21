@@ -7,10 +7,10 @@ type NavItem = typeof NAV_ITEMS[number];
 
 const SKILLS = {
   "Languages": ["Python", "Java", "JavaScript", "TypeScript", "Bash", "C", "C++", "HTML"],
-  "ML & AI": ["TensorFlow", "Scikit-learn", "XGBoost", "Pandas", "NumPy", "Keras"],
-  "Security": ["Splunk", "Bloodhound", "Active Directory", "Kali Linux", "SPL"],
-  "Techniques": ["NLP", "Anomaly Detection", "LSTMs", "GNNs", "XAI (SHAP/LIME)", "Time-Series"],
-  "Platforms": ["Jupyter Notebooks", "Microsoft Active Directory", "Windows", "Unix/Linux"],
+  "ML & AI": ["TensorFlow", "PyTorch Geometric", "Scikit-learn", "XGBoost", "Pandas", "NumPy", "Keras"],
+  "Security": ["Splunk", "Bloodhound", "Active Directory", "Kali Linux", "SPL", "IsolationForest"],
+  "Techniques": ["NLP", "Anomaly Detection", "LSTMs", "GNNs", "GINEConv", "DDP", "XAI (SHAP/LIME)", "Time-Series", "Regression", "SVM", "Clustering"],
+  "Platforms": ["Jupyter Notebooks", "Microsoft Active Directory", "Kali Linux", "Windows", "Unix/Linux"],
 };
 
 const COURSES = [
@@ -41,9 +41,10 @@ const EXPERIENCE = [
     location: "Fairfield, CT",
     color: "green" as const,
     bullets: [
-      "Anomaly detection on water distribution sensor data using Python + Jupyter",
-      "XGBoost classifier: 96.9% Precision, 99.7% Recall on live infrastructure data",
-      "8+ hrs/week on international team — supervised + deep learning experimentation",
+      "Designed and trained a joint LSTM + GINEConv (GNN) model for leak detection across 109K+ held-out windows on four pipe network topologies — F1=0.93, ROC-AUC=0.981",
+      "Scaled training pipeline from 50 to 2,000+ scenarios (1.46M graph windows) with parallelized CSV-to-Parquet preprocessing and stable multi-GPU training across dual 25GB VRAM GPUs",
+      "Built production-hardened infrastructure: crash-safe checkpoints, SIGTERM handling, per-epoch heartbeat monitoring, and automated evaluation reports",
+      "XGBoost classifier on live infrastructure sensor data: 96.9% Precision, 99.7% Recall",
     ],
   },
   {
@@ -53,17 +54,17 @@ const EXPERIENCE = [
     location: "Fairfield, CT",
     color: "amber" as const,
     bullets: [
-      "Monitored enterprise network traffic with Splunk (team of 6)",
-      "Built Python + SPL detection scans and custom Splunk dashboards",
-      "Audited 15,000+ Microsoft Active Directory accounts, disabled inactive users",
-      "Used Bloodhound to map and reduce attack surface across the enterprise",
-      "Led ML research of Splunk AI — presenting findings to CISO",
+      "Monitored enterprise network traffic with Splunk alongside a team of six; contributed to developing the Project Manager role within the SOC team structure",
+      "Built Python + SPL detection scans and Splunk dashboards to visualize blocked traffic and risk trends; audited 45,000+ Microsoft Active Directory accounts and disabled inactive users",
+      "Reduced attack surface using Bloodhound to enumerate and map AD privilege escalation paths",
+      "Engineered a Python + SPL IsolationForest anomaly detection system analyzing 20,000+ network event logs across 30-day spans — flagging logins to atypical machines — producing findings that drove direct enterprise configuration changes",
+      "Led ML research on Splunk AI capabilities; presenting findings to CISO",
     ],
   },
   {
     role: "Independent Project: Emotion & Trust Classifier",
     org: "Self-directed NLP Research",
-    period: "Dec 2025 – Present",
+    period: "Oct 2025 – Dec 2025",
     location: "Remote",
     color: "blue" as const,
     bullets: [
@@ -203,7 +204,7 @@ export default function Home() {
               marginBottom: "1.5rem",
             }}
           >
-            ML Engineer · SOC Technician · CS @ Fairfield University
+            ML Engineer · SOC Technician · CS @ Fairfield '26 · M.S. AI @ Penn '28
           </div>
 
           <p
@@ -215,10 +216,10 @@ export default function Home() {
               fontSize: 15,
             }}
           >
-            Computer Science senior graduating May 2026, with hands-on experience building
-            production ML models and working inside a live Security Operations Center. I target
-            roles at the intersection of AI and security — where threat detection meets intelligent
-            systems.
+            Computer Science senior graduating May 2026, heading to Penn for an M.S. in AI.
+            Hands-on experience building production ML models — LSTM + GNN leak detection,
+            XGBoost anomaly detection, NLP pipelines — and working inside a live Security
+            Operations Center. I target roles at the intersection of AI and security.
           </p>
 
           {/* Tags */}
@@ -421,10 +422,10 @@ export default function Home() {
       </span>
     </div>
     <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#5ab4d6", marginBottom: "0.75rem" }}>
-      MSE in Artificial Intelligence
+      M.S. Engineering: Artificial Intelligence
     </div>
     <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#7a9aaa", fontStyle: "italic" }}>
-      Focus: AI Ethics and Engineering
+      Focus: Ethically-based AI/ML Engineering in cybersecurity and real-world infrastructure
     </div>
   </div>
 
@@ -554,7 +555,7 @@ export default function Home() {
             gap: "0.5rem",
           }}
         >
-          <span>Reid VanTrieste · Fairfield University CS '26</span>
+          <span>Reid VanTrieste · Fairfield CS '26 · Penn M.S. AI '28</span>
           <span>Built with Next.js + Tailwind</span>
         </footer>
       </main>
