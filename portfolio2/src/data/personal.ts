@@ -1,0 +1,30 @@
+export const personal = {
+  name: "Reid W. VanTrieste",
+  shortName: "Reid VanTrieste",
+  email: "Reidvantrieste@gmail.com",
+  phone: "610-314-1880",
+  linkedin: "https://www.linkedin.com/in/reidvantrieste/",
+  github: "https://github.com/reidvt",
+  githubHandle: "reidvt",
+  location: "Philadelphia, PA area",
+  graduation: "May 2026",
+  gpa: "3.4",
+  university: "Fairfield University",
+  degree: "B.S. Computer Science",
+  minor: "Mathematics",
+  // Graduate education
+  gradUniversity: "University of Pennsylvania",
+  gradDegree: "M.S. Engineering: Artificial Intelligence",
+  gradExpected: "Expected May 2028",
+  gradFocus: "Ethically-based AI/ML Engineering in cybersecurity and real-world infrastructure",
+  roles: [
+    "ML Engineer",
+    "SOC Technician",
+    "CS @ Fairfield '26",
+    "M.S. AI @ Penn '28",
+  ],
+  resumes: {
+    ml: "/resume-ml.pdf",
+    security: "/resume-security.pdf",
+  },
+} as const;
