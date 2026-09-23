@@ -8,40 +8,19 @@ Personal portfolio website for Reid W. VanTrieste — Computer Science student a
 
 ## About
 
-This repo contains two portfolio variants targeting different roles Reid is actively applying for ahead of May 2026 graduation. Both share the same dark terminal aesthetic and codebase — they differ in emphasis and content ordering.
+A single-page, game-like portfolio with a dark terminal aesthetic: a boot sequence, an interactive command terminal, and an orbital navigation wheel. It covers Reid's ML / AI work (GNN leak-detection capstone, NLP emotion classifier, deepfake detector) and SOC / security experience at Fairfield University.
+
+All site content (projects, skills, courses, personal info) lives in `src/data/`.
 
 ---
 
-## Portfolio Variants
+## Local Development
 
-### Variant A — Security / SOC
-
-**Target roles:** SOC Analyst, Security Engineer, Threat Intelligence, GRC, MSSPs
-
-**Highlights:**
-- SOC Technician at Fairfield University's Security Operations Center
-- Audited 15,000+ Microsoft Active Directory accounts in a live enterprise environment
-- Built Python + SPL detection pipelines and Splunk dashboards
-- Used Bloodhound to map and reduce Active Directory attack surface
-- Led ML research of Splunk AI; presenting findings to CISO
-- Familiarity with Kali Linux, enterprise IAM, and SIEM operations
-
-**Ideal companies:** Darktrace, CrowdStrike, SentinelOne, Palantir, MSSPs
-
----
-
-### Variant B — ML / AI
-
-**Target roles:** ML Engineer, Data Scientist, NLP Engineer, AI Startups
-
-**Highlights:**
-- Machine Learning Engineer at School of Engineering & Computing (sponsored by Recursive AI)
-- XGBoost anomaly detection on water distribution sensor data — **96.9% Precision / 99.7% Recall**
-- Multi-task NLP pipeline for emotion & trust classification: 27 emotional states, 210,000+ annotated samples
-- Explainable AI with SHAP (global feature importance) and LIME (misclassification diagnostics)
-- 62.7% trust detection accuracy, 61.2% sentiment accuracy
-
-**Ideal companies:** AI startups, NLP/data science teams, hybrid AI-security companies
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+```
 
 ---
 
@@ -70,15 +49,12 @@ Dark terminal aesthetic — intentional, minimal, no fluff.
 
 ---
 
-## Site Sections
+## Structure
 
 ```
-/              → Hero (name, status, role tags)
-/experience    → Work history + independent projects
-/education     → Degree, GPA, coursework
-/skills        → Languages, tools, ML stack
-/research      → Deep-dive areas (AD, Bloodhound, Splunk, XAI, NLP, anomaly detection)
-/contact       → Email, LinkedIn, phone
+src/app/            layout, global styles, single page (/)
+src/components/     BootOverlay, CmdTerminal, OrbitalWheel
+src/data/           projects, skills, courses, personal info
 ```
 
 ---
