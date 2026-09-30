@@ -194,7 +194,7 @@ export default function Home() {
           <div className="cta-row">
             <a href="mailto:Reidvantrieste@gmail.com" className="btn btn-green">EMAIL ME</a>
             <a href="https://linkedin.com/in/reidvantrieste" className="btn btn-blue" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
-            <a href="https://github.com/reidvantrieste" className="btn btn-amber" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+            <a href="https://github.com/reidvt" className="btn btn-amber" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
           </div>
         </section>
 
@@ -381,7 +381,7 @@ export default function Home() {
             </div>
             <div className="contact-row">
               <span className="contact-label">GITHUB</span>
-              <a href="https://github.com/reidvantrieste" className="contact-value green" target="_blank" rel="noopener noreferrer">github.com/reidvantrieste ↗</a>
+              <a href="https://github.com/reidvt" className="contact-value green" target="_blank" rel="noopener noreferrer">github.com/reidvt ↗</a>
             </div>
             <div className="contact-row">
               <span className="contact-label">LOCATION</span>

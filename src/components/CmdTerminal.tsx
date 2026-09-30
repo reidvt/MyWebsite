@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
 import { SKILLS_DATA } from '@/data/skills';
+import { PROJECTS } from '@/data/projects';
 
 const CMDS = ['help', 'ls', 'cd', 'whoami', 'skills', 'ping', 'git log', 'clear', 'sudo', 'matrix', 'coffee', 'theme', 'exit'];
 
@@ -34,7 +35,7 @@ export default function CmdTerminal({ onAchievement, onAddXp, onThemeToggle, onM
     ls() {
       showOut([
         ['cg', 'drwxr-xr-x  about/'],
-        ['cg', 'drwxr-xr-x  projects/    (9 missions)'],
+        ['cg', `drwxr-xr-x  projects/    (${PROJECTS.length} missions)`],
         ['cg', 'drwxr-xr-x  experience/'],
         ['cg', 'drwxr-xr-x  education/'],
         ['cg', 'drwxr-xr-x  skills/'],
@@ -71,7 +72,7 @@ export default function CmdTerminal({ onAchievement, onAddXp, onThemeToggle, onM
         ['', ''],
         ['cb', 'EMAIL    →  Reidvantrieste@gmail.com'],
         ['cb', 'LINKEDIN →  linkedin.com/in/reidvantrieste'],
-        ['cg', 'GITHUB   →  github.com/reidvantrieste'],
+        ['cg', 'GITHUB   →  github.com/reidvt'],
         ['ca', 'PHONE    →  610-314-1880'],
         ['ca', 'CITY     →  Philadelphia, PA area'],
         ['', ''],
@@ -84,6 +85,7 @@ export default function CmdTerminal({ onAchievement, onAddXp, onThemeToggle, onM
         ['cg', 'commit a7f3d2e  HEAD → main'],
         ['ca', 'Date: Sep 2026'],
         ['', '    feat: ship portfolio v3 with orbital project wheel'],
+        ['', '    feat: add PaceSetter, STALKER, FitPlatform, job pipeline'],
         ['', ''],
         ['cg', 'commit 4b8c91a'],
         ['ca', 'Date: Aug 2026'],
