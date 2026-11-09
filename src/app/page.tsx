@@ -212,6 +212,19 @@ export default function Home() {
         <section id="experience">
           <div className="section-label"><span>// Experience</span></div>
           <div className="exp-list">
+            <div className="exp-card blue">
+              <div className="exp-header">
+                <span className="exp-role">AI Search Engineer (GEO)</span>
+                <span className="exp-period">Oct 2026 – Present</span>
+              </div>
+              <div className="exp-org blue">Freelance · 8-location pediatric dental group · New York</div>
+              <ul className="exp-bullets">
+                <li>Built a ~1,600-line Python toolkit that measures how AI assistants recommend a local business — 20 localized questions per office, each run 3× through Gemini with Google Search grounding, scored for mention, rank, competitors, and cited sources</li>
+                <li>Set a 480-answer baseline across 8 offices (named in 88.5%, top 5 in 69%, first in 30%), showing the gap was being recommended first, not being mentioned</li>
+                <li>Audited Google listings via the Places API (New) against a master location sheet; generated and deployed schema.org JSON-LD to all 8 office pages (8/8 pass Google&apos;s Rich Results Test)</li>
+                <li>Wrote an offline re-scorer that removed false-positive competitors at zero API cost; monthly exports feed a 7-tab client dashboard at ~$0.50 per full run</li>
+              </ul>
+            </div>
             <div className="exp-card green">
               <div className="exp-header">
                 <span className="exp-role">Machine Learning Engineer</span>
